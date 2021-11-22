@@ -82,8 +82,8 @@ function App() {
       <div className="container">
         <Header showAdd={showAddTask} onAdd={() => setShowAddTask(!showAddTask)} />
         <Routes>
-          <Route path='/' exact render={(props) => 
-          (
+          <Route path='/' exact element={ 
+          
             <>
               {showAddTask && <AddTask onAdd={addTask}/>}
               { tasks.length > 0
@@ -91,7 +91,7 @@ function App() {
                 : 'No tasks to show'
               }
             </>
-          )} />
+          } />
           <Route path='/about' element={<About/>} />
         </Routes>
         <Footer />
